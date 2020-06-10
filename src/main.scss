@@ -1,0 +1,156 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    offset: 0;
+}
+
+$maincolor: #445162;
+
+body {
+    width: 100%;
+    font-family: Arial, serif;
+    line-height: 1.5rem;
+}
+
+h1, h2, h3, h4 {
+    font-weight: normal;
+}
+
+h2 {
+    width: 100%;
+    padding-bottom: 30px;
+    font-size: 1.85em;
+    font-size: 30px;
+    color: $maincolor;
+}
+
+.container {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header,
+.contacts {
+    background-color: $maincolor;
+    h1,h2,ul {
+        color: white;
+    }
+}
+
+header {
+    font-size: 20px;
+    order: 0;
+    .header-inner {
+        width: 50%;
+    }
+    ul {
+        list-style-image: url(img/check-icon.png);
+        line-height: 30px;
+        font-size: 20px;
+        padding: 50px 0 0 32px;
+    }
+    h1 {
+        font-size: 3em;
+
+    }
+    .product-img {
+        width: 470px;
+        height: 215px;
+        background-color: white;
+    }
+}
+
+.container {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .screenshot:nth-of-type(n+3),
+    li:nth-child(n+4) {
+        padding-bottom: 0;
+    }
+}
+
+picture {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+section {
+    &:nth-of-type(odd){
+        background-color: white;
+    }
+    &:nth-of-type(even) {
+        background-color: #f5f5f5;
+    }
+    &.contacts {
+        background-color: $maincolor;
+    }
+    &:not(.about) h2 {
+        text-align: center;
+    }
+}
+
+
+.about {
+    .about-inner {
+        width: 50%;
+        p {
+            margin-bottom: 1.25rem;
+        }
+    }
+    .about-img {
+        width: 430px; 
+        height: 235px;
+        background-color: $maincolor;
+    }
+}
+
+.pros_and_cons {
+    ul {
+        list-style: none;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        li {
+            width: 50%;
+            padding:0 40px 20px;
+            background-image: url(img/plus-icon.png);
+            background-position: left top;
+            background-repeat: no-repeat;
+
+        }
+    }
+}
+
+.screenshots {
+    .container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .screenshot {
+        width: 50%;
+        padding-bottom: 30px;
+        display: inherit;
+        flex-direction: row;
+        .screenshot-inner {
+            height: fit-content;
+        }
+    }
+    picture {           
+        height: fit-content;
+        flex-shrink: 0.36;
+        justify-content: flex-start;
+        .screenshots-img {
+            width: 200px;
+            height: 150px;
+            background-color: $maincolor;
+        }
+    }
+}
